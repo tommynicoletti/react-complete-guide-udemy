@@ -6,11 +6,6 @@ import "./ExpenseItem.css";
 
 const ExpenseItem = (props) => {
   const [title, setTitle] = useState(props.title); // React Hook call inside the component not inside component's functions
-  
-  const clickHandler = () =>{
-    setTitle('updated!');
-    console.log(title);
-  }
 
   return (
     <li>
@@ -20,7 +15,6 @@ const ExpenseItem = (props) => {
           <h2>{title}</h2>
           <div className="expense-item__price">$ {props.amount}</div>
         </div>
-        <button onClick={clickHandler}>Change Title</button>
       </Card>
     </li>
   );
